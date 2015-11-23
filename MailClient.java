@@ -23,7 +23,7 @@ public class MailClient
     }
 
     /**
-     * 
+     * para saber si lo a enviado 
      */
     public MailItem getNextMailItem()
     {
@@ -31,7 +31,7 @@ public class MailClient
     }
 
     /**
-     * 
+     * imprimir los datos del mensaje completo y si no tiene contenido de message
      */
     public void printNextMailItem()
 
@@ -47,7 +47,7 @@ public class MailClient
     }
 
     /**
-     * 
+     * para enviar un correo a una persona 
      */
     public void sendMailItem(String to, String message)
     {
