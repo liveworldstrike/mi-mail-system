@@ -55,4 +55,11 @@ public class MailClient
         server.post(item);
 
     }
+    
+    public void MailServerItemUser()
+    {
+         int contador = server.howManyMailItems(user);
+         System.out.println("contador de correos:"+contador);
+         
+    }
 }
