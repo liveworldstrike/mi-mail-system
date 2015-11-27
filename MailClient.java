@@ -55,11 +55,25 @@ public class MailClient
         server.post(item);
 
     }
-    
+
     public void MailServerItemUser()
     {
-         int contador = server.howManyMailItems(user);
-         System.out.println("contador de correos:"+contador);
-         
+        int contador = server.howManyMailItems(user);
+        System.out.println("contador de correos:"+ contador);
+
+    }
+
+    public void getNextMailItemAndSendAutomaticRespond()
+    {
+        MailItem mail = getNextMailItem();
+        if (mail != null){
+            String nuevosubject = "RE: " + mail.getSubject();
+            String texto = "Estoy fuera de la oficina \n" + "message: " + mail.getMessage();
+            MailItem respuestaAutomatica = new MailItem(user,item.getFrom(),newSubject,texto);
+            server.post(respuestaAutomatica);
+            ultimocorreo = item;
+
+        }
     }
 }
+
