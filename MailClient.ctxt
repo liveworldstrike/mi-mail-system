@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=server1\ user2
+comment0.params=server\ user
 comment0.target=MailClient(MailServer,\ java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ MailClient\r\n
 comment1.params=
@@ -8,7 +8,7 @@ comment1.text=\r\n\ para\ saber\ si\ lo\ a\ enviado\ \r\n
 comment2.params=
 comment2.target=void\ printNextMailItem()
 comment2.text=\r\n\ imprimir\ los\ datos\ del\ mensaje\ completo\ y\ si\ no\ tiene\ contenido\ de\ message\r\n
-comment3.params=to\ message
-comment3.target=void\ sendMailItem(java.lang.String,\ java.lang.String)
+comment3.params=to\ subject\ message
+comment3.target=void\ sendMailItem(java.lang.String,\ java.lang.String,\ java.lang.String)
 comment3.text=\r\n\ para\ enviar\ un\ correo\ a\ una\ persona\ \r\n
 numComments=4

@@ -15,10 +15,10 @@ public class MailClient
     /**
      * Constructor for objects of class MailClient
      */
-    public MailClient( MailServer server1,String user2)
+    public MailClient( MailServer server,String user)
     {
-        server = server1;
-        user = user2;
+        this.server = server;
+        this.user = user;
 
     }
 
@@ -49,9 +49,9 @@ public class MailClient
     /**
      * para enviar un correo a una persona 
      */
-    public void sendMailItem(String to, String message)
+    public void sendMailItem(String to, String subject, String message)
     {
-        MailItem item = new MailItem(user,to,message);
+        MailItem item = new MailItem(user,to,subject,message);
         server.post(item);
 
     }

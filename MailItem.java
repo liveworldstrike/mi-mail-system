@@ -13,15 +13,18 @@ public class MailItem
     private String to;
     //texto del mensaje
     private String message;
+    //añadir asunto
+    private String subject;
 
     /**
      * Constructor for objects of class MailItem
      */
-    public MailItem(String from1,String to2,String message3)
+    public MailItem(String from,String to,String subject,String message)
     {
-        from = from1;
-        to = to2;
-        message = message3;
+        this.from = from;
+        this.to = to;
+        this.message = message;
+        this.subject = subject;
 
     }
 
@@ -31,6 +34,16 @@ public class MailItem
     public String getFrom()
     {
         return from;
+
+        
+    }
+    
+    /**
+     *metodo para saber el asunto
+     */
+    public String getSubject()
+    {
+        return subject;
 
         
     }
@@ -61,6 +74,7 @@ public class MailItem
     {
         System.out.println("From: " + from);
         System.out.println("To: " + to);
+        System.out.println("Subject " + subject);
         System.out.println("Message: " + message);
     }
 
